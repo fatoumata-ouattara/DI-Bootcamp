@@ -1,0 +1,30 @@
+
+.divContent{
+	display: inline-flex;
+}
+.div2{
+
+background: linear-gradient(to bottom right,black, purple);
+
+width: 400px;
+height: 600px; 
+text-align: center;
+}
+
+
+input {
+	text-align: center;
+	width: 250px;
+	height: 20px;
+}
+
+.cercle{
+	width: 180px;
+	height: 80px;
+	background-color:purple;
+	border-radius: 60px;
+	text-align: center;
+    color: white;
+    margin-top:105px;
+    border-color:white;
+    border:solid;
