@@ -1,0 +1,56 @@
+
+body {
+	
+	background-image: url(image/font.jpg) ;
+	background-repeat: no-repeat;
+	background-size: 100% 150%;
+}
+
+ul{ 
+    float: right;
+	}
+
+li {
+	display: inline-block;
+	color: white;
+    padding: 15px 20px;
+}
+ nav {
+ 	background-color:black;
+ 	width: 1539px;
+ 	height: 100px; 
+    margin: -9px;
+
+ }
+
+ i{
+ color: white;
+
+ }
+ h1 {
+ 	
+ 	color: yellow;
+ 	font-size: 70px;
+ 	font-family:Noto Serif Hong-Kong;
+
+ }
+p{ text-align: justify;
+width: 700px;
+color: lightyellow; 
+}
+
+ footer{
+ 	position: absolute;
+ 	width: 100%;
+ 	color: white;
+    height: 40px; 
+ 	text-align: center;
+ 	padding-top:50px;
+ 	bottom: 0px;
+ 	background-color: black;
+
+ }
+a{
+	color: blue;
+	font-size: 20px;
+}

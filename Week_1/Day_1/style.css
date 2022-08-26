@@ -1,0 +1,36 @@
+#div2{
+	text-align: center;
+}
+
+
+#case{
+border:solid red ; width: 1050px;
+ margin-left: 100px;
+ text-align: center; 
+
+}
+
+.colspan{
+	background-color: yellow;
+}
+
+td, th {
+	border: 1px solid black;
+
+	
+ 
+}
+td {
+	height: 100px;
+}
+
+table{
+	width: 70%;
+margin-left: 100px;
+}
+
+img {
+	width: 400px;
+	height: 200px;
+      border: solid 5px red; 
+}

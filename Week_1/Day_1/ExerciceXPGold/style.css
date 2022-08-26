@@ -1,0 +1,43 @@
+
+main{ 
+background-image: url('image/back.jpg ');
+flex-wrap: wrap;
+width: 900px;
+height: 500px;
+margin-left: 20%;
+
+
+}
+
+
+
+.div1{ 
+	background-color: lightgray;
+     height: 80px;
+
+}
+
+.div2{
+	text-align: center; 
+	margin-top: 5%; 
+	padding-left: 10px;
+
+
+}
+
+span {
+	background-color: blue;
+}
+#p {
+	padding: 50px 30px;
+}
+
+footer {
+	text-align: center; 
+	padding: 15px 10px;
+	background-color: lightgray;
+	 width: 881px;
+      height: 150px;
+      margin-left: 20%;
+
+}

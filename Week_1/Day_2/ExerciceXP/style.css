@@ -1,0 +1,78 @@
+body {
+background-image: url('image/fond2.jpg');
+background-repeat: no-repeat;
+background-size: 100% 600%;
+}
+
+nav {
+  background-color:orange;
+  width: 1536px;
+  height: 100px; 
+  margin: -9px;
+  
+
+ }
+
+ a {
+  color: white;
+ }
+
+ #span1{
+ 	float: right; 
+ 	margin:40px;
+
+ }
+
+ footer{
+ 	position: absolute;
+ 	width: 100%;
+ 	color: white;
+    height: 40px; 
+ 	text-align: center;
+ 	padding-top:50px;
+ 	bottom: 0px;
+ 	background-color:pink;
+
+ }
+a{
+	color: white;
+	font-size: 20px;
+}
+
+.col-4{
+	width: 33%;
+	
+	}
+
+.col-6 {
+	width: 50%;
+	
+}
+
+.col-12 {
+	width: 100%;
+
+	
+}
+
+@media(min-width: 765px) and (max-width: 960px) 
+{  
+
+    .col-4 {
+	         width: 50%;
+           }
+	.col-6 {
+	width: 100%;
+			}
+}
+
+
+@media (max-width: 765px)  {
+	
+.col-4 {
+	width: 100%;
+	
+		}
+}
+
+

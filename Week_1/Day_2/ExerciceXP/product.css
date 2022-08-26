@@ -1,0 +1,60 @@
+.div1{
+	display: flex;
+}
+
+.div2{
+       display: inline-block;
+
+    }
+
+.section1{
+			background-repeat: no-repeat; 
+			width: 200px; height: 250px; 
+        }
+.section2{
+	text-align: center;
+}
+article: hover 
+ {
+	color: green;
+}
+
+.p1{
+  	display: inline-block;
+  }
+
+ .p2{
+  		display: inline-block; 
+  		float: right;
+
+  }
+
+.imgD{
+	
+	background-border: solid 3px gray;
+	
+}
+
+.cercle{
+	width: 40px;
+	height: 40px;
+	background-color:green;
+	border-radius: 20px;
+	text-align: center;
+    color: white;
+
+
+    
+
+}
+.cercle1{
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	border-radius: 20px;
+	text-align: center;
+    color: white;
+
+    
+
+}
