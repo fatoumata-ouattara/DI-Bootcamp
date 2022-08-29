@@ -1,0 +1,50 @@
+
+.divC{
+
+	display: flex;
+	justify-content: center;
+	border:dashed blue 5px ;
+	margin: 100px;
+}
+
+.div1{
+	display: block;
+}
+
+
+
+.div1> div {
+	background-color:red;
+	width: 100px;
+	height: 100px;
+	margin:10px;
+}
+
+.div2{
+	display: flex;
+    align-items: center;
+}
+
+
+.div2 > div {
+	background-color: yellow;
+	width: 100px;
+	height: 100px;
+	margin:40px;
+
+}
+
+
+.div3{
+	display: block;
+}
+
+
+.div3 > div{
+	background-color: green;
+	width: 100px;
+	height: 100px;
+	margin:10px;
+
+}
+
