@@ -16,6 +16,7 @@ text-align: center;
 margin-top: -5px;
 }
 
+
 .p2{
 	text-align: justify;
 	 margin-left: 15px; 
@@ -73,16 +74,42 @@ margin-left: 50px;}
 	background-color: lightblue;
 }
 
-@media only screen and (max-width: 767px;){
-	.grid0{
-	display: grid;
-	grid-template-columns: auto;
-	grid-gap: 0px 0px;
-    width: 350px;
-    height: 200px;
-margin-top: 100px;
-margin-left: 50px;}
+#divR{
+	display: flex;
 }
+	.midle{
+		margin: 200px;
+	}
+
+
+	#bk{
+		margin-top: 0px;
+	}
+
+@media only screen and (max-width: 800px) {
+  /* For mobile phones: */
+  #divR {
+ display: block;
+  }
+ .midle{
+ 	margin-left: 50px;
+       }
+
+.body1{
+	background-image: url("image/bleu.jpg");
+	background-repeat: no-repeat;
+
+	background-size:  1900px;
+       }
+
+       #bk{
+		display: block;
+	}
+
+
+}
+
+
 
 	.grid1{
 	display: grid;
