@@ -4,11 +4,11 @@
 			Enregistrez votre repas préféré de la journée dans une variable (c'est-à-dire petit-déjeuner, déjeuner ou dîner)
 			Console.logI eat <favorite food> at every <favorite meal>*/
 
-
-				     // Code
-				        let food= "Foutou"
-				        let mDay= "breakfast" 
-				        console.log("i eat "+ food +" at every "+ mDay) 
+			     // Code
+				        let food= "Foutou";
+				        let mDay= "breakfast" ;
+				       console.log("i eat "+ food +" at every "+ mDay);
+                
 
 /* .***************************************************************************************************************************************************.*/
 //Exercice 2: series
@@ -20,10 +20,11 @@
 				3.Console.log a sentence using both of the variables created above
 				For example : I watched 3 series : black mirror, money heist, and the big bang theory*/
 				//Code
-				     let myWatchedSeries = ["black mirror", "money heist", "the big bang theory"]
-					 let myWatchedSeriesLength = myWatchedSeries.length
-					 let myWatchedSeriesSentence = myWatchedSeries.toString()
-					 console.log( "i watched "+ myWatchedSeriesLength + " series : " + add.toString()+ ".")
+				     let myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
+					 let myWatchedSeriesLength = myWatchedSeries.length;
+					 let myWatchedSeriesSentence = myWatchedSeries.toString();
+					 console.log( "i watched "+ myWatchedSeriesLength + " series : " + myWatchedSeriesSentence + ".");
+				       
 
 				/*Part II
 					1.Change the series “the big bang theory” to “friends”. Hint : You will need to use the index of “the big bang theory” series.
@@ -100,67 +101,66 @@
 
 				//code
 
-						typeof(15)
+					   console.log(typeof(15))
 						// Prediction: number
 						// Actual: Number
 
-						typeof(5.5)
+						console.log(typeof(5.5))
 						// Prediction: decimal
 						// Actual: Number
-
-						typeof(NaN)
+						console.log(typeof(NaN))
+						
 						// Prediction: object
 						// Actual: Number
-
-						typeof("hello")
+						console.log(typeof("hello"))
+					
 						// Prediction: string
 						// Actual: String
 
-						typeof(true)
+						console.log(typeof(true))
 						// Prediction: boolean
 						// Actual:boolean
-
-						typeof(1 != 2)
+						console.log(typeof(1 != 2))
+					
 						// Prediction: boolean
 						// Actual: boolean
 
-						"hamburger" + "s"
+					    console.log("hamburger" + "s")	
 						// Prediction: hamburgers 
 						// Actual: "hamburgers"
 
-						"hamburgers" - "s"
+						console.log("hamburgers" - "s")
 						// Prediction: hamburger
 						// Actual: NaN
 
-						"1" + "3"
+						console.log("1" + "3")
 						// Prediction: "13" car on a 1 et 3 comme chaines de caractères
 						// Actual: "13"
 
-						"1" - "3"
+						console.log("1" - "3")
 						// Prediction: NaN 
 						// Actual: -2
 
-						"johnny" + 5
+						console.log("johnny" + 5)
 						// Prediction: johnny5 car on a là une concatenation des elements
 						// Actual: "johnny5"
 
-						"johnny" - 5
+						console.log("johnny" - 5)
 						// Prediction:  impossible car insensé
 						// Actual: NaN
 
-						99 * "hello"
+						console.log(99 * "hello")
 						// Prediction: impossible
 						// Actual: NaN
 
-						1 != 1
+						console.log(1 != 1)
 						// Prediction: false
 						// Actual: false
 
-						1 == "1"
-						// Prediction: impossible car 1 ne peut pas etre egale a un caractere
+						console.log(1 == "1")						// Prediction: impossible car 1 ne peut pas etre egale a un caractere
 						// Actual: true
 
-						1 === "1"
+						console.log(1 === "1")
 						// Prediction: impossible car === n'est pas sensé
 						// Actual: false
 
@@ -173,58 +173,58 @@
 					Exécutez ensuite l'expression dans la console. Notez la sortie réelle dans un commentaire et comparez-la avec votre prédiction.
 					Quelle est la sortie de chacune des expressions ci-dessous ?*/						
 
-					5 + "34"
+					console.log(5 + "34")
 					// Prediction:534,  5 est un nombre et 34 une chaine de caractère donc on a une concatenation
 					// Actual: 534
 
-					5 - "4"
+					console.log(5 - "4")
 					// Prediction: 1 car l'operateur - considère "4" comme un nombre
 					// Actual: 1
 
-					10 % 5
-					// Prediction: 0 car le resultat est le reste de la division de 10 par 5
+					console.log( 10 % 5)				
+						// Prediction: 0 car le resultat est le reste de la division de 10 par 5
 					// Actual: 0
 
-					5 % 10
+					console.log(5 % 10)
 					// Prediction: 5 , le reste de la division de 5 par 10 donne 0 et il reste 5
 					// Actual:5
 
-					"Java" + "Script"
+					console.log("Java" + "Script")
 					// Prediction:JavaScript
 					// Actual:" javascript"
 
-					" " + " "
+					console.log(" " + " ")
 					// Prediction: rien
 					// Actual: neant
 
-					" " + 0
+					console.log(" " + 0)
 					// Prediction: 0
 					// Actual:0
 
-					true + true
+					console.log(true + true)
 					// Prediction: true
 					// Actual: 2
 
-					true + false
+					console.log(true + false)
 					// Prediction: impossible
 					// Actual: 1
 
-					false + true
+					console.log(false + true)
 					// Prediction: 1 / false est definie comme 0 et true 1
 					// Actual: 1
 
-					false - true
+					console.log(false - true)
 					// Prediction: -1 / false est definie comme 0 et true 1
 					// Actual: -1
 
-					!true
+					console.log(!true)
 					// Prediction: false / l'opposé de true est false
 					// Actual: false
 
-					3 - 4
+					console.log(3 - 4)
 					// Prediction: -1  / 3 et 4 sont des nombres 
 					// Actual: -1
 
-					"Bob" - "bill"
+					console.log("Bob" - "bill")
 					// Prediction: impossible
 					// Actual: NaN
