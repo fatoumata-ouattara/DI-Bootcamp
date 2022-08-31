@@ -3,6 +3,7 @@
 
 let sentence = ["my","favorite","color","is","blue"];
 console.log(sentence.join(" "));
+
 //Exercice2
 /*Créez 2 variables. Les valeurs doivent être des chaînes. Par exemple:*/
 
