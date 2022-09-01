@@ -166,10 +166,15 @@ let details = {
   is: 'Rudolf',
   the: 'raindeer'
 };
+var phrase= " ";
 
+for (var a in details){
+    phrase=phrase +" "+ a+" "+details[a];
+   
+    
 
-for (var a in details){console.log(a+" "+details[a])}
-
+}
+  console.log(phrase);  
 
 
 //Exercice7
