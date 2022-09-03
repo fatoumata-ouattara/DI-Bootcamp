@@ -96,28 +96,55 @@ isDivisible(45);
 
 console.log("***************Exercice4*****************")
 
-let stock = { 
+
+function myBill() {
+
+
+	var stock = { 
     "banana": 6, 
     "apple": 0,
     "pear": 12,
     "orange": 32,
     "blueberry":1
+    
+} ; 
 
-}  
-
-let prices = {    
+var prices = {    
     "banana": 4, 
     "apple": 2, 
     "pear": 1,
     "orange": 1.5,
     "blueberry":10
-} 
 
-let shoppingList=["banana", "orange", "apple"];
+} ;
 
-function myBill() {
+var shop;
+var i;
+var sum=0;
+var shoppingList= ["banana", "orange", "apple"];
+	
+	for(  i=0; i< shoppingList.length ; i++)
 
+		{
+             
+			if(shoppingList[0] in Object.keys(stock))
+			{
+
+			var shop=shoppingList[i];
+			 var sum= sum + prices.banana;    
+
+			}
+			else{
+					sum=sum+0;
+			}
+			
+
+		}
+console.log(sum );
+     return sum;
 }
 
 
 myBill();
+
+console.log("***************Exercice5*****************")
