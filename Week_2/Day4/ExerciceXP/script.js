@@ -94,13 +94,10 @@ function isDivisible(divisor){
 isDivisible(3);
 isDivisible(45);
 
-console.log("***************Exercice4*****************")
+console.log("***************Exercice4*****************");
 
-
-function myBill() {
-
-
-	var stock = { 
+function myBill(){
+	let stock = { 
     "banana": 6, 
     "apple": 0,
     "pear": 12,
@@ -109,7 +106,7 @@ function myBill() {
     
 } ; 
 
-var prices = {    
+let prices = {    
     "banana": 4, 
     "apple": 2, 
     "pear": 1,
@@ -118,33 +115,119 @@ var prices = {
 
 } ;
 
-var shop;
-var i;
-var sum=0;
-var shoppingList= ["banana", "orange", "apple"];
-	
-	for(  i=0; i< shoppingList.length ; i++)
+let shoppingList=["banana", "orange", "apple"];
+var prix=0;
+for(var i in shoppingList){
+	   for(var a in prices){
+	   	if(shoppingList[i]==a){
 
-		{
-             
-			if(shoppingList[0] in Object.keys(stock))
-			{
+		 	 prix=prix+prices[a];
 
-			var shop=shoppingList[i];
-			 var sum= sum + prices.banana;    
-
-			}
-			else{
-					sum=sum+0;
-			}
-			
-
+		 	
+		 	}
+		 	else{prix=prix+0;}
+		 
+		 	 
 		}
-console.log(sum );
-     return sum;
+	}
+
+	     console.log( "La shoppingList donne le prix de : "+prix); 
+
+					
+
+
+              }
+
+myBill();
+console.log("***************Exercice5*****************");
+function changeEnough(itemPrice, amountOfChange){
+
+	var quarters=0.25;
+	var dimes = 0.10;
+	var nickel= 0.05;
+	var penny=0.01;
+
+    var change=(amountOfChange[0]*0.25)+(amountOfChange[1]*0.10)+(amountOfChange[2]*0.05)+(amountOfChange[3]*0.01);
+
+    if(change>itemPrice){
+    		     console.log("Change = " +change +" > "+ itemPrice);
+    	return true;}
+
+    else{
+    	     console.log("Change = " +change +" < "+ itemPrice);
+    	return false;}
+
 }
 
 
-myBill();
+console.log(changeEnough(4.25, [25, 20, 5, 0]));
+console.log(changeEnough(14.11, [2,100,0,0])) ;
+console.log(changeEnough(0.75, [0,0,20,5])) ;
 
-console.log("***************Exercice5*****************")
+
+console.log("***************Exercice6*****************");
+
+
+function hotelCost(){
+	var nbNuit=Number(prompt("Combien de nuit voulez vous passer a l'hotel?"));
+	while(isNaN(nbNuit)|| nbNuit==""){
+		nbNuit= prompt("Combien de nuit voulez vous passer a l'hotel?");
+	}
+	
+			var totalPrice= nbNuit*140;
+		    return totalPrice;
+}
+
+function planeRideCost(){
+	var destination= prompt("Quelle est votre destination?");
+	var pric=0;
+	while(!isNaN(destination )|| destination==""){
+		destination= prompt("Quelle est votre destination?");
+	}
+
+   switch(destination){
+		case "london": pric=183;
+		break;
+		case "paris": pric= 220;
+		break;
+		default: pric=300 ;
+
+	}
+
+return pric;
+}
+
+function rentalCarCost(){
+
+	var nbDay=Number(prompt("Combien de jours pour la voiture?"));
+	var totalRent=0;
+	
+	while(isNaN(nbDay)|| nbDay==""){
+		nbDay= prompt("Redonner un nombre correct!");}
+	
+		if(nbDay>10)
+			{
+			
+			totalRent= (nbDay*40)-((nbDay*40)*0.05);
+		}
+		else{
+			totalRent = nbDay*40;
+		    
+		}
+
+return totalRent ;
+}
+
+function totalVacationCost(){
+
+	console.log(" L'hotel coute : "+hotelCost()+" $");
+	console.log(" Les billets d'avion coutent : "+planeRideCost()+" $");
+	console.log(" La location de la voiture coute : "+rentalCarCost()+" $");
+}
+
+totalVacationCost();
+
+
+
+
+

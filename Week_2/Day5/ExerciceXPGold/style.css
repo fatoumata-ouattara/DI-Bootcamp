@@ -1,0 +1,23 @@
+.operator{
+	background-color: orange;
+	color: white;
+	font-size: 40px;
+}
+
+.cle{
+	background-color: red;
+	color: white;
+	font-size: 40px;
+}
+
+.num{
+	background-color: green;
+	color: white;
+	font-size: 40px;
+}
+
+.ret{
+	background-color: blue;
+	color: white;
+	font-size: 40px;
+}
