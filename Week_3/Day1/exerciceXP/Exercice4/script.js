@@ -73,7 +73,7 @@ tr3.appendChild(td);
 
 
 
-
+var myDiv2= document.querySelector('section');
 var myDiv= document.querySelector('div');
 myDiv.appendChild(tableau);
 var node=document.querySelector('table');
@@ -81,6 +81,17 @@ node.setAttribute('style'," border-collapse: collapse ;border: solid 1px; width:
 var node2=document.querySelectorAll('td');
 for(var i=0; i<12;i++){
 node2[i].setAttribute('style'," border: solid blue;");
+}
+
+
+
+
+for(var i=0; i<allBooks.length; i++){
+var section= document.createElement('section');
+myDiv.appendChild(section);
+
+section.innerHTML=allBooks[i].Titre+ " written by "+ allBooks[i].auteur;
+
 }
 
 
