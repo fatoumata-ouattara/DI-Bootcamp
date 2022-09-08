@@ -36,7 +36,7 @@ tr.appendChild(td0);
 for(var i=0; i<3; i++)
 {
 var td= document.createElement('td');
-td.innerHTML= allBooks[i].Titre;
+td.innerHTML= allBooks[i].Titre ;
 tr.appendChild(td);	
 
 }

@@ -31,7 +31,7 @@ for(var i=0;i<planetTab.length; i++)
 	    mySection.appendChild(divPlm);  
     }
     else{
-    	nbM(5);
+    	nbM(2);
     }
 
    
