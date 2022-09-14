@@ -78,7 +78,9 @@ function list(a){
 	a.preventDefault();
 	for(var i =0; i<2;i++){
 		let li= document.createElement('li');
-	    if(document.forms[0].elements[i].value==""){alert("Remplir le champ vide");}
+	    if(document.forms[0].elements[i].value==""){var x=document.forms[0].elements[i];
+
+	    	x.setAttribute('required','remplire le champ vide');}
 	    else{
 	    li.innerHTML=document.forms[0].elements[i].value;
 		ul=document.querySelector('ul');
