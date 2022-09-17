@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mes formes</title>
+	<style type="text/css">
+	.cercle{
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	border-radius: 50px;  
+
+}
+
+.cercle2{
+	width: 100px;
+	height: 60px;
+	background-color: green;
+	border-radius: 20px; 
+	text-align: center; 
+	color: red;
+
+}
+	</style>
+	<script type="text/javascript">
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+         function drag(ev){
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+         function drop(ev){
+             ev.preventDefault();
+             var data= ev.dataTransfer.getData("text");
+
+             ev.target.appendChild(document.getElementById(data));
+             ev.target.setAttribute("style",'border: solid pink; background-color:violet;display:flex; width: 700px;height:300px');
+             document.querySelectorAll('h1')[0].setAttribute("style",'display:none');
+             document.querySelectorAll('p')[0].setAttribute("style",'display:none');
+             document.querySelectorAll('p')[1].setAttribute("style",'font-size:40px');
+
+            document.querySelectorAll('p')[1].innerHTML=20+"/"+20;
+
+
+
+
+        }
+    </script>
+</head>
+<body style="background-color: wheat">
+
+<div style="display: flex; margin-left: 400px" >
+<div id="div1" style=" background-color: blue; width: 700px; height: 300px; text-align: center; " ondrop="drop(event)" ondragover="allowDrop(event)">
+	<h1>Mettre tous les triangles dans l'espace bleue</h1>
+	<p style="color: white">Glisser et déposer l'objet dans l'espace bleue!!</p>
+</div>
+</div>
+
+<div style=" width: 900px; height: 200px; background-color: wheat; margin-left: 350px; display: flex ;margin-top: 50px"  >
+	    <img src="image/f3.jpg" id="drag5" draggable="true" ondragstart="drag(event)" width="200" height="80">
+
+	 <img src="image/f1.png" id="" draggable="true" ondragstart="drag(event)" width="200" height="80">
+    <img src="image/f2.png" id="" draggable="true" ondragstart="drag(event)" width="200" height="80">
+    <img src="image/f7.jpg" id="drag3" draggable="true" ondragstart="drag(event)" width="200" height="80">
+    <img src="image/f5.jpg" id="" draggable="true" ondragstart="drag(event)" width="200" height="80">
+
+</div>
+<div style="display: block ; margin-left: 900px" >
+<form action="forme2.html">
+	<input type="submit" name="" value="Reprendre" style="background-color: lightgray; width: 100px; height: 50px ; margin-left: 300px">
+</form>
+
+<div id="score" class="cercle2" style=" margin-left: 300px" draggable="true" ondragstart="drag(event)"> <p> Score</p></div>
+
+</div>
+<form action="connexion.html">
+    <button class="retour" id="retour" style="background-color: aqua;position: relative;left: 50px;bottom: 100px;height: 50px;width: 60px;">Retour</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.rotate {
+  -webkit-animation: rotate 1s normal linear infinite;
+  animation: rotate 2s normal linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 90deg);
+    transform: rotate3d(0, 0, 1, 50sdeg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 50deg);
+  }
+  
+ 
+}

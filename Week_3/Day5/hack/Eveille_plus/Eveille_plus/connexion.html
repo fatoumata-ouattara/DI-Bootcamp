@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tete">
+            <h1 class="connect" id="">connexion</h1><br>
+            <h6 id="identifiant"></h6>
+            <form id="formulaire">
+            <div class="id"><input type="text" id="Identifiant" placeholder="Identifiant" required></div>
+            <button id="login">login</button>
+        </form>
+    </div>
+
+<div class="footer" id="pied">
+    <form action="animaux.html"><div class="animaux" id="anim"><button class="jouer">Jouer</button></div></form>
+    <form action="forme.html"><div class="forme" id="form"><button class="jouer">Jouer</button></div></form>
+    <div class="couleur" id="coul"><button class="jouer">Jouer</button></div>
+</div>
+<h5 class="regle" id="regle">Règle de jeux: <br>
+    Choisir la couleur correspondant au nom de couleur figurant en bas. <br>
+    Si vous clicker sur la mauvaise couleur vous reprenez mais si vous <br>
+    clicker sur la bonne couleur vous passez a d'autres choix. 
+</h5>
+<div class="objets">
+    <button class="objet1" id="objet1"></button>
+    <input type="text" id="proposition">
+</div>
+
+<div class="solution" id="solution">
+    <button class="objet2" id="objet2" value="Rouge"></button>
+    <button class="objet3" id="objet3" value="Jaune"></button>
+    <button class="objet4" id="objet4" value="vert"></button>
+    <button class="objet5" id="objet5" value="Bleu"></button>
+    <button class="objet6" id="objet6" value="Orange"></button>
+    <button class="objet7" id="objet7" value="Blanc"></button>
+    <button class="objet8" id="objet8" value="Noir"></button>
+    <button class="objet9" id="objet9" value="Rose"></button>
+    <button class="objet10" id="objet10" value="Violet"></button>
+    <button class="objet11" id="objet11" value="Marron"></button>
+</div>
+
+    <script>
+//generation d'identifiant
+          var digits = '0123456789';
+          let OTP = '';
+          for (let i = 0; i < 6; i++ ) {
+              OTP += digits[Math.floor(Math.random() * 10)];
+          }
+document.getElementById("identifiant").innerHTML="Utiliser ce identifiant pour vous connectez :"+OTP;
+
+//pour pouvoir accede aux categorie de jeux
+document.getElementById("regle").style.display="none";
+        document.getElementById("solution").style.display="none";
+        document.getElementById("anim").style.display="none";
+        document.getElementById("form").style.display="none";
+        document.getElementById("coul").style.display="none";
+        document.getElementById("login").addEventListener("click", function click(){
+            if(document.getElementById("Identifiant").value!=OTP){
+                alert("identifiant incorrect réessayez");
+            }else{
+                document.getElementById("tete").style.display="none";
+            document.getElementById("anim").style.display="flex";
+            document.getElementById("form").style.display="flex";
+            document.getElementById("coul").style.display="flex";
+            document.getElementById("identifiant").style.display="none";
+           
+            event.preventDefault();
+            }
+        }
+        )
+
+//pour accede aux jeux apres click
+document.getElementById("objet1").style.display="none";
+document.getElementById("proposition").style.display="none";
+document.getElementById("anim").onclick=function(){
+        document.getElementById("anim").style.display="none";
+        document.getElementById("form").style.display="none";
+        document.getElementById("coul").style.display="none";
+        
+}
+document.getElementById("form").onclick=function(){
+        document.getElementById("anim").style.display="none";
+        document.getElementById("form").style.display="none";
+        document.getElementById("coul").style.display="none";
+        
+}
+document.getElementById("coul").onclick=function(){
+        document.getElementById("anim").style.display="none";
+        document.getElementById("form").style.display="none";
+        document.getElementById("coul").style.display="none";
+        document.getElementById("objet1").style.display="block";
+        document.getElementById("proposition").style.display="block";
+        document.getElementById("solution").style.display="block";  
+        document.getElementById("regle").style.display="block"; 
+    
+}
+//fonction de gestion des choix aleatoire
+function generate(){
+    var tab=["Rouge","Jaune","Vert","Bleu","Orange","Blanc","Noir","Rose","Violet","Marron"];
+let OTP = '';
+let taille=tab.length;
+OTP += tab[Math.floor(Math.random() * taille)];
+document.getElementById("proposition").value=OTP;
+
+}
+
+
+
+for(let i=0;i<10;i++){
+    generate();
+document.getElementById("objet2").onclick=function(){
+    if(document.getElementById("proposition").value=="Rouge"){
+        document.getElementById("objet1").style.backgroundColor="red";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet3").onclick=function(){
+    if(document.getElementById("proposition").value=="Jaune"){
+        document.getElementById("objet1").style.backgroundColor="yellow";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet4").onclick=function(){
+    if(document.getElementById("proposition").value=="Vert"){
+        document.getElementById("objet1").style.backgroundColor="green";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet5").onclick=function(){
+    if(document.getElementById("proposition").value=="Bleu"){
+        document.getElementById("objet1").style.backgroundColor="blue";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet6").onclick=function(){
+    if(document.getElementById("proposition").value=="Orange"){
+        document.getElementById("objet1").style.backgroundColor="Orange";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet7").onclick=function(){
+    if(document.getElementById("proposition").value=="Blanc"){
+        document.getElementById("objet1").style.backgroundColor="White";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet8").onclick=function(){
+    if(document.getElementById("proposition").value=="Noir"){
+        document.getElementById("objet1").style.backgroundColor="Black";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet9").onclick=function(){
+    if(document.getElementById("proposition").value=="Violet"){
+        document.getElementById("objet1").style.backgroundColor="Violet";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet10").onclick=function(){
+    if(document.getElementById("proposition").value=="Rose"){
+        document.getElementById("objet1").style.backgroundColor="pink";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+document.getElementById("objet11").onclick=function(){
+    if(document.getElementById("proposition").value=="Marron"){
+        document.getElementById("objet1").style.backgroundColor="brown";
+        generate();
+    }else{
+        alert("mauvaise couleur");
+    }
+}
+}
+
+
+
+
+
+/*document.getElementById("coul").addEventListener("click",function generateOTP() {
+                  var tab=["Rouge","Jaune","vert","Bleu","Orange","Blanc","Noir","Rose","Violet","Marron"];
+                  let OTP = '';
+                  let taille=tab.length;
+                  for (let i = 0; i < 1; i++ ) {
+                    OTP += tab[Math.floor(Math.random() * taille)];
+                    document.getElementById("proposition").value=OTP;
+                  }
+              })
+              generateOTP();
+              
+              /*document.getElementById("objet2").onclick=function(){
+                if(OTP="Rouge"){
+                    document.getElementById("objet1").style.backgroundColor="red";
+                }else{
+                    alert("mauvaise couleur");
+                }
+              }
+              /*document.getElementById("objet2").onclick=function(){
+                alert("bonjour");
+              
+              }
+              document.getElementById("objet2").addEventListener("click",function(){
+                if(document.getElementById("proposition").style.backgroundColor==document.getElementById("objet2").style.backgroundColor){
+                    document.getElementById("objet1").style.backgroundColor="red";
+                    alert("bonjour");
+                }else{
+                    alert("Mauvaise couleur");
+                }
+              })*/
+             
+</script>
+</body>
+</html>
