@@ -1,6 +1,6 @@
 
 body {
-	margin-left: 400px;
+	margin-left: 100px;
 	display: block;
 }
 
@@ -8,8 +8,8 @@ body {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-gap: 2px 0px;
-    width: 815px;
-    height: 720px;
+    width: 1020px;
+    height: 1140px;
    
 
 }
@@ -27,8 +27,8 @@ margin-left: 20px;
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-gap: 2px 0px;
-    width: 800px;
-    height: 700px;
+    width: 1000px;
+    height: 300px;
     padding: 10px;
 
 }
@@ -51,9 +51,10 @@ margin-left: 20px;
 
 .item2{
 	background-color: #e5e7e6;
+
 }
 
-img{
+.img{
 	width: 150px;
 	float: right;
 	margin-top: -100px;
