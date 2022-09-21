@@ -23,22 +23,48 @@ class Zoo():
     def get_animals(self):
          for i in self.animals:
              print(i)
+    
     def sell_animal(self, animal_sold):
         self.animals.remove(animal_sold)
+   
     def sort_animals(self):
         anim=sorted(self.animals)
         print(anim)
+        l=len(anim)
+        an=[]
+        a=[]
+"""        for j in anim:
+            for i in range(l):
+               if j[0]==anim[i][0]:
+                  a.append(anim[i])
+               
+            an.append(a)
+            a=[]
+        m=[]       
+        print(an) 
+                
+    """    
+             
+          
+           
+            
       
 ramat_gan_safari=Zoo("safai")
-ramat_gan_safari.add_animal("zèbre")
+ramat_gan_safari.add_animal("zebre")
 ramat_gan_safari.add_animal("porc")
 ramat_gan_safari.add_animal("ane")
+ramat_gan_safari.add_animal("molusque")
+ramat_gan_safari.add_animal("chien")
+ramat_gan_safari.add_animal("pigeon")
+ramat_gan_safari.add_animal("chat")
+ramat_gan_safari.add_animal("mouche")
+ramat_gan_safari.add_animal("mouton")
 ramat_gan_safari.get_animals()
-print("-----------------")
+print("---------------------------")
 ramat_gan_safari.sell_animal("porc")
 ramat_gan_safari.get_animals()
 print("-----------------")
 ramat_gan_safari.sort_animals()
-print("-----------------")
+print("--------------------------")
 
 
