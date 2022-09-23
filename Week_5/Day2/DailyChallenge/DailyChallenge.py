@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Thu Sep 22 15:06:06 2022
+
+@author: hp
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Wed Sep 21 22:43:21 2022
 
 @author: hp
@@ -64,19 +71,51 @@ class Pagination():
     def __init__(self, items=[], pageSize=10):
         
         self.items=items
-        self.pageSize=pageSize
-        self.dic 
+        self.pageSize=pageSize 
         self.cur=1
+        l=[]
+        l2=[]
+        self.ind=0
+        nb=self.pageSize
+        if len(self.items)%nb!=0:
+           nb_page=len(self.items)
+        else: 
+           nb_page=(len(self.items)/nb)
+        for i in range(1,nb_page,nb):
+                l.append(i)
+        for a in range(1,len(l)+1):
+            l2.append(a)
+            
+        liste=[]
+        k=self.firstPage()
+        liste.append(k)
+        pas=nb 
+       
+        for i in range(nb,len(self.items),pas):
+            pas=nb+self.pageSize
+            l3=self.items[nb: pas]
+            nb=pas
+            liste.append(l3)
+        self.dic=dict(zip(l2,liste))  
+        
+      
     def getVisibleItems(self):
-         pass
+         values=list(self.dic.values())
+         if self.ind<1:
+             print(f'{list(values[0])}')
+         else:
+             if self.ind>self.totalPages():
+                 print(f'{list(values[self.totalPages()])}')
+             else:
+                 print(f'{list(values[self.ind-1])}')
+                 
+                            
     def prevPage(self):
-       p_p=[]
-          
+          self.ind-=1
+          return self.ind
     def nextPage(self):
-        f=self.items.self.firstPage()
-        
-        
-    
+         self.ind+=1     
+         return self
     def firstPage(self):
         f_p=self.items[:self.pageSize]
         
@@ -106,38 +145,18 @@ class Pagination():
         return nb_page 
         
     def goToPage(self, ind):
-        l=[]
-        l2=[]
-        nb=self.pageSize
-        if len(self.items)%nb!=0:
-           nb_page=len(self.items)
-        else: 
-           nb_page=(len(self.items)/nb)
-        for i in range(1,nb_page,nb):
-                l.append(i)
-        for a in range(1,len(l)+1):
-            l2.append(a)
+        if ind<1:
+           self.ind=1
+        else:
+             if ind>self.totalPages():
+                 self.ind=self.totalPages()
+             else:
+                 self.ind=ind
+    def curentPage(self):
+        for x,y in self.dic.items():
+            if y==self.goToPage(self.cur):
+               return x
             
-        liste=[]
-        k=self.firstPage()
-        liste.append(k)
-        pas=nb 
-       
-        for i in range(nb,len(self.items),pas):
-            pas=nb+self.pageSize
-            l3=self.items[nb: pas]
-            nb=pas
-            liste.append(l3)
-        dic=dict(zip(l2,liste))  
-        return dic
- #       for x,y in dic.items():
-  #          if ind==x:
-   #             return y
-    #        else:
-     #           if ind>len(dic):
-      #              return self.lastPage()
-    def curentPage():
-        pass
     
     
                              
@@ -148,13 +167,15 @@ alphabetList = "abcdefghijklmnopqrstuvwxyz"
 list(alphabetList)
 p = Pagination(alphabetList, 4)
 
-print(p.firstPage())
-print(p.goToPage(8))
-print(p.totalPages())
+p.nextPage().nextPage().nextPage().nextPage().nextPage().nextPage().nextPage()
 
+p.getVisibleItems()
 
+p.prevPage()
+p.getVisibleItems()
 
-
+p.goToPage(0)
+p.getVisibleItems()
 
 
 
