@@ -33,7 +33,7 @@ select last_name, first_name from students where last_name='Benichou' or first_n
 --Fetch the students whose first_names contain the letter a.
 select last_name, first_name from students where first_name like '%a%';
 --Fetch the students whose first_names start with the letter a.
-select last_name, first_name from students where first_name like 'a%';
+select last_name, first_name from students where first_name like 'A%';
 --Fetch the students whose first_names end with the letter a.
 select last_name, first_name from students where first_name like '%a';
 --Fetch the students whose second to last letter of their first_names are a (Example: Leah).
