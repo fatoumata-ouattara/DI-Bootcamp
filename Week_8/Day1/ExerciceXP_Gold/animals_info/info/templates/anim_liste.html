@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} anim_liste {% endblock title %}
+{% block contenu %}
+
+    <h1>Liste des animaux</h1>
+
+    {% for k,v in data.items %}
+
+      <li><a href="{% url 'animal' v %}" style="color: black">{{ k }}</a></li>
+
+    {% endfor %}
+
+
+{% endblock contenu %}
